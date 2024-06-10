@@ -1,25 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<title>curva quadratica</title>
+<title>introduao ao gradientes</title>
 <meta charset="UTF-8">
  <script>
     function draw(){
-        var canvas=document.getElementById("meuCanvas");
-        var cntxt=canvas.getContext("2d");
-        cntxt.beginPath();
-        cntxt.fillStyle="rgb(0,255,0)";
-        cntxt.moveTo(200,100);
-        cntxt.quadraticCurveTo(150,150,200,200);
-        cntxt.fill();
-        cntxt.stroke();
-        cntxt.beginPath();
-        cntxt.moveTo(200,100);
-        cntxt.quadraticCurveTo(250,150,200,200);
-        cntxt.fill();
-        cntxt.stroke();
-        cntxt.closePath();
+        var canvas = document.ElementById("meuCanvas");
+        if (canvas.getContext("2d");
+        var gra=cntxt.createLinearGradient(0,0,200,0);
+        var gradInf=cntxt.createLinearGradient(0,0,200,0);
+        var gradR=cntxt.createRadialGradient(300,100,15,300,100,100);
+        var gradRinf = cntxt.createRadialGradient(300,300,15,300,300,100);
+        grad.addColorStop(0,"Red")
+        gra.addColorStop(1,"rgb(0,0,255)");
+        gradInf.addColorStop(0,"rgb(120,10,10)");
+        gradInf.addColorStop(0.5,"rgb(10,120,10)")
+       gradInf.addColorStop(1,"rgb(10,10,120)")
+       gradR.addColorStop(0,"green");
+       gradR.addColorStop(1,"rgb(255,0,0)");
+       gradRinf.addColorStop(0,"#0000ff");
+       gradRinf.addColorStop(0.25,"#ffff00");
+       gradRinf.addColorStop(0.5,"#00ff00");
+       gradRinf.addColorStop(0.75,"#ff0000");
+       gradRinf.addColorStop(1,"#ffffff");
+       cntxt.beginPath();
+       cntxt.fillStyle=grad;
+       cntxt.fillRect(5,5,195,195);
+       cntxt.stroke();
+       cntxt.closePath();
+       cntxt.begginPath();
+       cntxtfillStyle=gradInf;
+       cntxt.moveTo(10,300);
+       cntxt.quadraticCurveTo(100,200,190,300);
+       cntxt.fill();
+       cntxt.stroker();
+       cntxt.closePath();
+
+
     }
- </script>
-</head>
 </html>
